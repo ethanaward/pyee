@@ -16,29 +16,12 @@ override_dh_auto_clean:
 override_dh_auto_build:
 	set -ex && for pyvers in $(PYVERS) $(PY3VERS); do \
 		python$$pyvers setup.py build; \
-		python$$pyvers-dbg setup.py build; \
 	done
 
 override_dh_auto_install:
 	set -ex && for pyvers in $(PYVERS) $(PY3VERS); do \
 		python$$pyvers setup.py install --install-layout=deb --root $(CURDIR)/debian/tmp; \
-		python$$pyvers-dbg setup.py install --install-layout=deb --root $(CURDIR)/debian/tmp; \
 	done
 
 override_dh_install:
 	dh_install --list-missing
-
-override_dh_installdocs:
-	dh_installdocs
-	rm -rf debian/python-pyee-dbg/usr/share/doc/python-pyee-dbg
-	ln -s python-pyee debian/python-pyee-dbg/usr/share/doc/python-pyee-dbg
-
-	rm -rf debian/python3-pyee-dbg/usr/share/doc/python3-pyee-dbg
-	ln -s python3-pyee debian/python3-pyee-dbg/usr/share/doc/python3-pyee-dbg
-
-
-override_dh_strip:
-	dh_strip -X"python3" --dbg-package=python-pyee-dbg
-	dh_strip -X"python2" --dbg-package=python3-pyee-dbg
-
-

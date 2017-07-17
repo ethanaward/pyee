@@ -1,5 +1,5 @@
-pyee (3.0.3.1-ubuntu1~ubuntu17.04~ppa2) zesty; urgency=medium
+pyee (3.0.3-1) UNRELEASED; urgency=medium
 
-  * Change licensing
+  * Initial Debian packaging
 
- -- Mycroft Devs <devops@mycroft.ai>  Thu, 25 May 2017 12:25:02 -0500
+ -- Mycroft Devs <devops@mycroft.ai>  Mon, 17 Jul 2017 10:25:02 -0500
