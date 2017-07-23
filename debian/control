@@ -14,18 +14,22 @@ Build-Depends: debhelper (>= 9),
                python3-setuptools,
                python3-pytest-runner
 Standards-Version: 4.0.0
+Description: A port of node.js's EventEmitter to python
+ pyee supplies an EventEmitter object similar to the EventEmitter from node.js
 
 Package: python-pyee
-Architecture: any
+Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}
 Provides: ${python:Provides}
 XB-Python-Version: ${python:Versions}
-Description: pyee module for Python
- This package contains the module for Python 2.x.
+Description: A port of node.js's EventEmitter to python
+ This package contains the pyee module for Python 2. pyee supplies an
+ EventEmitter object similar to the EventEmitter from node.js.
 
 Package: python3-pyee
-Architecture: any
+Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends}
 Provides: ${python:Provides}
-Description: pyee - Python 3.x
- This package contains the module for Python 3.x.
+Description: A port of node.js's EventEmitter to python
+ This package contains the pyee module for Python 3. pyee supplies an
+ EventEmitter object similar to the EventEmitter from node.js.
