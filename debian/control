@@ -18,7 +18,6 @@ Standards-Version: 4.0.0
 Package: python-pyee
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}
-Provides: ${python:Provides}
 XB-Python-Version: ${python:Versions}
 Description: Port of node.js's EventEmitter to python
  This package contains the pyee module for Python 2. pyee supplies an
@@ -27,7 +26,6 @@ Description: Port of node.js's EventEmitter to python
 Package: python3-pyee
 Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends}
-Provides: ${python:Provides}
 Description: Port of node.js's EventEmitter to python
  This package contains the pyee module for Python 3. pyee supplies an
  EventEmitter object similar to the EventEmitter from node.js.
